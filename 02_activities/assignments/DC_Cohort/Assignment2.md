@@ -56,7 +56,8 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+One possible architecture would be to maintain a table of all customers, adding new rows for new customers, and updating their information (including postal codes) after each purchase. A second option would be to also have customers input their postal code after every purchase, but to add a new line to the table for each customer purchase. In this way, the most recent instance of a given customer purchase should be used to access their information, as older purchases may contain incorrect information.
+The first option would be classified as Type 1, since there is a single row for each customer, and the information is updated every time they make a purchase. The second option is Type 2 since a new row is added from each purchase so that there are new rows with potentially new information added over time.
 ```
 
 ***
@@ -191,5 +192,5 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+The concept that modern AI models can trace their origins back to underpaid, perhaps unethical work decades ago is both shocking and unsurprising. Over the course of any technological development the current "state-of-the-art" systems owe their origins to the work of many in the past. This is simply the natural progression of technological development and neural networks, LLM, etc. are no different than any other invention. The concerning aspect here is how the developers go about improving their systems and who is impacted by their decisions. The fact that there are thousands of people out there being paid pennies to click images of dogs and cats so that some of the richest companies in the world can improve their bottom line is horrifying. As the author states, this is just another example of large companies exploiting workers for profit, just like in the fast fashion industry. Moving beyond the immediate impact of the workers in this situation, this system results in additional concerns with respect to the resulting models and output that their own biases impart to the training data. The classic example is Grok, which when trained on unmoderated Twitter posts, produced output that was riddled with racist, sexist, and otherwise horrendous answers. When training data is either not moderated, or is retrieved from a single source, it opens up the potential of the model to contain significant biases. In the case the authors site, human defined tags on images can be open to biases depending on the cultural or historical view points of the classifiers. For instance, individuals from regions will low cultural diversity may classify images of people dissimilar to themselves predominantly based on their appearances, despite perhaps more significant classifications being present. However to them, the most significant feature to an individual may be their race. In the end, LLM impact people at all stages, from training, to output, and the users of these systems must be aware of the impact and potential biases in their use.
 ```
